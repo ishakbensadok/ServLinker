@@ -1,0 +1,148 @@
+.launch-section {
+  text-align: center;
+  padding: 10rem 1rem;
+  display: flex;
+  justify-content: center;
+  background-color: #f9fafb;
+}
+.launch-steps {
+  max-width: 120rem;
+  width: 100%;
+}
+
+.launch-title {
+  margin-bottom: 0.5rem;
+}
+.launch-subtitle {
+  color: #65758b;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+/* Progress */
+.progress-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 1.4rem;
+  border-radius: 6px;
+  margin-left: 1rem;
+  background: #e4e4e7;
+  overflow: hidden;
+}
+
+.progress-fill {
+  width: 15%; /* dynamic based on active step */
+  height: 100%;
+  background: linear-gradient(-45deg, #1f4263, #25a77d);
+  background-size: 400% 400%;
+  animation: gradient 4s ease infinite;
+  border-radius: inherit;
+}
+
+/* Steps */
+.steps-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.step-card {
+  flex: 1;
+  min-width: 200px;
+  padding: 1rem;
+  border-radius: 12px;
+  background: #f8faff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.step-card span {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.step-circle {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background: #ddd;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+/* Step States */
+.step-card.done .step-circle {
+  background: #25a77d;
+}
+
+.step-card.active {
+  background: #fff;
+  border: 2px solid #25a77d;
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgb(37, 167, 125, 0.5);
+    transform: scale(1);
+  }
+
+  50% {
+    box-shadow: 0 0 40px rgb(37, 167, 125, 0.7);
+    transform: scale(1.02);
+  }
+}
+
+.step-card.active .step-circle {
+  background: linear-gradient(-45deg, #1f4263, #25a77d);
+  background-size: 400% 400%;
+  animation: gradient 4s ease infinite;
+}
+
+.step-card.pending .step-circle {
+  background: #bbb;
+}
+
+/* Steps count */
+.steps-count {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1f4263;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .launch-section {
+    padding: 10rem 3rem;
+  }
+}

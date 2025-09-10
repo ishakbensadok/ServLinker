@@ -1,0 +1,22 @@
+/* @import 'tailwindcss'; */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 50px;
+}
+.input {
+  outline: 0;
+  border: 1px solid #1f4263;
+  border-radius: 6px;
+  background-color: transparent;
+  font-size: 1.4rem;
+  padding: 0.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .input {
+    padding: 1rem;
+  }
+}

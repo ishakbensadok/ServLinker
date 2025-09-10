@@ -1,0 +1,20 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  padding: 0 2rem;
+  position: relative;
+  height: 80px;
+  font-family: 'montserrat', sans-serif;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.nav__wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    height: 100px;
+  }
+}

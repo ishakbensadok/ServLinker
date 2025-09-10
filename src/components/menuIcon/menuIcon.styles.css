@@ -1,0 +1,44 @@
+.menu-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  margin-right: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-icon {
+    display: none;
+  }
+}
+.menu-icon__wrapper {
+  width: 90%;
+}
+
+.menu-icon.is-active .menu-icon__line:nth-child(1) {
+  transform: translateY(70%) rotate(45deg);
+}
+.menu-icon.is-active .menu-icon__line:nth-child(2) {
+  display: none;
+}
+.menu-icon.is-active .menu-icon__line:nth-child(3) {
+  transform: rotate(-45deg);
+}
+.menu-icon.is-active .menu-icon__line {
+  margin: 0;
+}
+.menu-icon__line {
+  width: 100%;
+  height: 3px;
+  background: black;
+  display: block;
+  margin-bottom: 3px;
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+.menu-icon__line:last-child {
+  margin-bottom: 0;
+}

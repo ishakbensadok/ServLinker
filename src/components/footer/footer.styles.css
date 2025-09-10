@@ -1,0 +1,14 @@
+.footer {
+  height: 10rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+.footer__copyright {
+  border-top: 1px solid #dadbdd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+}
