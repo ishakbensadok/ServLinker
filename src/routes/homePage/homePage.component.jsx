@@ -15,9 +15,9 @@ function HomePage() {
     <div className='home-page'>
       <AnimatedCounter />
       <Hero />
+      <WhyServLinker />
       <LaunchSteps />
       <ServicesPreview />
-      <WhyServLinker />
       <BenefitsSection />
       <WaitlistForm />
       <Footer />
@@ -26,3 +26,4 @@ function HomePage() {
 }
 
 export default HomePage;
+
